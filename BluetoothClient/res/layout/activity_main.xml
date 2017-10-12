@@ -1,0 +1,105 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="429dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity" >
+
+        <Button
+            android:id="@+id/buttonDetect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Detect"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listViewDevices"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/buttonDetect"
+            android:layout_below="@+id/buttonDetect"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" >
+
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buttonCancelDiscovery"
+            android:layout_toLeftOf="@+id/buttonCancelDiscovery"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextPaste"
+            android:layout_alignRight="@+id/buttonPaste"
+            android:layout_below="@+id/editTextPaste"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonBrowse"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editTextMessage" />
+
+        <Button
+            android:id="@+id/buttonPaste"
+            style="@style/my_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignLeft="@+id/progressBar1"
+            android:layout_alignRight="@+id/buttonCancelDiscovery"
+            android:layout_below="@+id/buttonDetect" />
+
+        <EditText
+            android:id="@+id/editTextPaste"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/buttonBrowse"
+            android:layout_below="@+id/buttonPaste"
+            android:layout_marginTop="111dp"
+            android:ems="10"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonCancelDiscovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonDetect"
+            android:layout_alignBottom="@+id/buttonDetect"
+            android:layout_alignRight="@+id/imageView1"
+            android:text="Cancel Discovery"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonBrowse"
+            style="@style/blue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editTextMessage"
+            android:layout_marginLeft="20dp"
+            android:text="Browse" />
+
+    </RelativeLayout>
+
+</ScrollView>
